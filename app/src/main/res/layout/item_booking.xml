@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:id="@+id/plainImage"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/routeLabel"
+                    app:srcCompat="@drawable/ic_kc" />
+
+                <TextView
+                    android:id="@+id/routeLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Алматы – Нур-Султан"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/plainImage"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/departureTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="06:25"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/routeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/routeLabel" />
+
+                <TextView
+                    android:id="@+id/departureDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="30 ноя, ср"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/departureTimeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/departureTimeLabel" />
+
+                <android.support.constraint.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="end"
+                    app:constraint_referenced_ids="departureDateLabel,departureTimeLabel" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="44dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_dashed_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/departureDateLabel"
+                    app:layout_constraintStart_toEndOf="@+id/barrier"
+                    app:layout_constraintTop_toTopOf="@+id/departureTimeLabel" />
+
+                <TextView
+                    android:id="@+id/arrivalTimeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="09:45"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/arrivalDateLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="30 ноя., ср"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/arrivalTimeLabel"
+                    app:layout_constraintTop_toBottomOf="@+id/arrivalTimeLabel" />
+
+                <TextView
+                    android:id="@+id/additionalDaysLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/arrivalDateLabel"
+                    app:layout_constraintStart_toEndOf="@+id/arrivalTimeLabel"
+                    tools:ignore="SmallSp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/plainImage2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="3dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/routeLabel2"
+                    app:srcCompat="@drawable/ic_kc" />
+
+                <TextView
+                    android:id="@+id/routeLabel2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:text="Нур-Султан - Алматы"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/plainImage2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/departureTimeLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="23:25"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/routeLabel2"
+                    app:layout_constraintTop_toBottomOf="@+id/routeLabel2" />
+
+                <TextView
+                    android:id="@+id/departureDateLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="4 дек, ср"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/departureTimeLabel2"
+                    app:layout_constraintTop_toBottomOf="@+id/departureTimeLabel2" />
+
+                <android.support.constraint.Barrier
+                    android:id="@+id/barrier2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="end"
+                    app:constraint_referenced_ids="departureDateLabel2,departureTimeLabel2" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="44dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/bg_dashed_line"
+                    app:layout_constraintBottom_toBottomOf="@+id/departureDateLabel2"
+                    app:layout_constraintStart_toEndOf="@+id/barrier2"
+                    app:layout_constraintTop_toTopOf="@+id/departureTimeLabel2" />
+
+                <TextView
+                    android:id="@+id/arrivalTimeLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="01:25"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintTop_toTopOf="@+id/view2" />
+
+                <TextView
+                    android:id="@+id/arrivalDateLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="5 дек, ср"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/arrivalTimeLabel2"
+                    app:layout_constraintTop_toBottomOf="@+id/arrivalTimeLabel2" />
+
+                <TextView
+                    android:id="@+id/additionalDaysLabel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:text="+1"
+                    android:textColor="@color/colorDarkText"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/arrivalDateLabel2"
+                    app:layout_constraintStart_toEndOf="@+id/arrivalTimeLabel2"
+                    tools:ignore="SmallSp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </LinearLayout>
+
+    </android.support.design.card.MaterialCardView>
+
+</layout>
