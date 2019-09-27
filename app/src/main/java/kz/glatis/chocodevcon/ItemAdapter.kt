@@ -1,20 +1,13 @@
 package kz.glatis.chocodevcon
 
-import android.databinding.DataBindingUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import kz.glatis.chocodevcon.databinding.ItemAuthBinding
-import kz.glatis.chocodevcon.databinding.ItemBookingBinding
-import kz.glatis.chocodevcon.databinding.ItemTotalSumBinding
 
 class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private val items = ArrayList<ListItem>().apply {
-        add(ListItem.AuthItem())
-        add(ListItem.TotalSumItem())
-        add(ListItem.BookingItem())
-    }
+    private var items = emptyList<ListItem>()
 
     sealed class ListItem {
 
@@ -32,7 +25,7 @@ class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     fun createListItems(items: List<Any>) {
-        //create your list here
+        this.items = items as List<ListItem>
         notifyDataSetChanged()
     }
 
@@ -43,18 +36,15 @@ class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType) {
             ListItem.AUTH_ITEM -> {
-                AuthViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context),
-                    R.layout.item_auth, parent, false))
+                AuthViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_auth, parent, false))
             }
 
             ListItem.TOTAL_SUM_ITEM -> {
-                TotalSumViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context),
-                    R.layout.item_total_sum, parent, false))
+                TotalSumViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_total_sum, parent, false))
             }
 
             ListItem.BOOKING_ITEM -> {
-                BookingViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.context),
-                    R.layout.item_booking, parent, false))
+                BookingViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_booking, parent, false))
             }
 
             else -> {
@@ -71,21 +61,21 @@ class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         }
     }
 
-    inner class AuthViewHolder(private val binding: ItemAuthBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class AuthViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind() {
 
         }
     }
 
-    inner class TotalSumViewHolder(private val binding: ItemTotalSumBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class TotalSumViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind() {
 
         }
     }
 
-    inner class BookingViewHolder(private val binding: ItemBookingBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class BookingViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind() {
 
