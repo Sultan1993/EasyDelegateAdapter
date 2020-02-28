@@ -4,12 +4,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion 29
+
     defaultConfig {
         applicationId "kz.glatis.chocodevcon"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -21,6 +21,7 @@ android {
     dataBinding {
         enabled = true
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -31,7 +32,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:support-v4:$support_version"
     implementation "com.android.support:recyclerview-v7:$support_version"
     implementation "com.android.support:appcompat-v7:$support_version"
@@ -41,8 +42,4 @@ dependencies {
     implementation "com.android.support:support-compat:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     implementation "android.arch.lifecycle:extensions:1.1.1"
-
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }

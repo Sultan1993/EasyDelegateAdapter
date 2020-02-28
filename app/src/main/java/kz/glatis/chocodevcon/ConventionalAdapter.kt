@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ConventionalAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var items = emptyList<ListItem>()
 
@@ -25,6 +25,7 @@ class ItemAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     fun createListItems(items: List<Any>) {
+        //some logic here
         this.items = items as List<ListItem>
         notifyDataSetChanged()
     }
