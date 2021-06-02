@@ -1,8 +1,9 @@
 package kz.glatis.chocodevcon
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import kz.glatis.chocodevcon.delegateadapter.DelegateAdapterItem
 import kz.glatis.chocodevcon.model.AuthAdapterModel
 import kz.glatis.chocodevcon.model.BookingAdapterModel

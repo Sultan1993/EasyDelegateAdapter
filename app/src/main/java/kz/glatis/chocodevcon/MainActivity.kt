@@ -1,7 +1,8 @@
 package kz.glatis.chocodevcon
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val fragmentManager = supportFragmentManager
         val ft = fragmentManager.beginTransaction()
-        ft.replace(R.id.container, MainFragment(), "main")
+        ft.replace(R.id.container, MainFragment(),"main")
         ft.commit()
     }
 }

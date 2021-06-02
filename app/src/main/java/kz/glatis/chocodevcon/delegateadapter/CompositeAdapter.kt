@@ -1,9 +1,10 @@
 package kz.glatis.chocodevcon.delegateadapter
 
-import android.support.v7.recyclerview.extensions.ListAdapter
-import android.support.v7.widget.RecyclerView
+
 import android.util.SparseArray
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
 
 @Suppress("UNCHECKED_CAST")
 class CompositeAdapter(
