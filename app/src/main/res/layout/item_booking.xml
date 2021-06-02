@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
 
-    <android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -70,7 +70,7 @@
                     app:layout_constraintStart_toStartOf="@+id/departureTimeLabel"
                     app:layout_constraintTop_toBottomOf="@+id/departureTimeLabel" />
 
-                <android.support.constraint.Barrier
+                <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/barrier"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -121,9 +121,9 @@
                     app:layout_constraintStart_toEndOf="@+id/arrivalTimeLabel"
                     tools:ignore="SmallSp" />
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <android.support.constraint.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -176,7 +176,7 @@
                     app:layout_constraintStart_toStartOf="@+id/departureTimeLabel2"
                     app:layout_constraintTop_toBottomOf="@+id/departureTimeLabel2" />
 
-                <android.support.constraint.Barrier
+                <androidx.constraintlayout.widget.Barrier
                     android:id="@+id/barrier2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -228,10 +228,10 @@
                     app:layout_constraintStart_toEndOf="@+id/arrivalTimeLabel2"
                     tools:ignore="SmallSp" />
 
-            </android.support.constraint.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
-    </android.support.design.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </layout>
