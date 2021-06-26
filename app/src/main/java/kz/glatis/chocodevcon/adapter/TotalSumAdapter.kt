@@ -1,9 +1,9 @@
 package kz.glatis.chocodevcon.adapter
 
-import android.databinding.DataBindingUtil
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
 import kz.glatis.chocodevcon.delegateadapter.DelegateAdapter
 import kz.glatis.chocodevcon.R
 import kz.glatis.chocodevcon.databinding.ItemTotalSumBinding
@@ -14,7 +14,8 @@ class TotalSumAdapter:
     DelegateAdapter<TotalSumAdapterModel, TotalSumAdapter.TotalSumViewHolder>(TotalSumAdapterModel::class.java) {
 
     override fun createViewHolder(parent: ViewGroup): RecyclerView.ViewHolder =
-        TotalSumViewHolder(DataBindingUtil.inflate(LayoutInflater
+        TotalSumViewHolder(
+            DataBindingUtil.inflate(LayoutInflater
             .from(parent.context), R.layout.item_total_sum, parent, false))
 
     override fun bindViewHolder(
