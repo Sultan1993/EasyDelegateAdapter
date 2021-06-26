@@ -1,9 +1,10 @@
 package kz.glatis.chocodevcon.delegateadapter
 
-import android.support.v7.recyclerview.extensions.ListAdapter
-import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import kz.glatis.chocodevcon.adapter.PlaceSectionAdapter
 
 @Suppress("UNCHECKED_CAST")
 class CompositeAdapter(
@@ -57,6 +58,11 @@ class CompositeAdapter(
         private val delegates: SparseArray<DelegateAdapter<DelegateAdapterItem, RecyclerView.ViewHolder>> = SparseArray()
 
         fun add(delegateAdapter: DelegateAdapter<out DelegateAdapterItem, *>): Builder {
+            delegates.put(count++, delegateAdapter as DelegateAdapter<DelegateAdapterItem, RecyclerView.ViewHolder>)
+            return this
+        }
+
+        fun add(delegateAdapter: PlaceSectionAdapter): Builder {
             delegates.put(count++, delegateAdapter as DelegateAdapter<DelegateAdapterItem, RecyclerView.ViewHolder>)
             return this
         }

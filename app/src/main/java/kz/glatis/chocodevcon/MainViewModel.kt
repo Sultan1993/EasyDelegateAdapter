@@ -1,11 +1,12 @@
 package kz.glatis.chocodevcon
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import kz.glatis.chocodevcon.delegateadapter.DelegateAdapterItem
 import kz.glatis.chocodevcon.model.AuthAdapterModel
 import kz.glatis.chocodevcon.model.BookingAdapterModel
+import kz.glatis.chocodevcon.model.PlaceAdapterModel
 import kz.glatis.chocodevcon.model.TotalSumAdapterModel
 
 class MainViewModel : ViewModel() {
@@ -28,15 +29,27 @@ class MainViewModel : ViewModel() {
         )
         val totalSumItem = TotalSumAdapterModel(25000, 1200)
 
-        _listItems.value = listOf<DelegateAdapterItem>(
-            authItem,
-            bookingItem,
-            totalSumItem,
-            bookingItem,
-            authItem,
-            totalSumItem,
-            totalSumItem,
-            totalSumItem
-        )
+        val placeItem = listOf(
+            PlaceAdapterModel("Hawaii", ""),
+            PlaceAdapterModel("Spain", ""),
+            PlaceAdapterModel("Japan", ""),
+            PlaceAdapterModel("Australia", ""),
+            PlaceAdapterModel("Venezuela", ""),
+            PlaceAdapterModel("Colombia", ""),
+            PlaceAdapterModel("Netherlands", ""),
+            PlaceAdapterModel("Germany", ""))
+
+        placeItem.forEachIndexed { index, _ ->
+            _listItems.value = listOf(
+                authItem,
+                bookingItem,
+                totalSumItem,
+                bookingItem,
+                authItem,
+                totalSumItem,
+                totalSumItem,
+                placeItem[index]
+            )
+        }
     }
 }

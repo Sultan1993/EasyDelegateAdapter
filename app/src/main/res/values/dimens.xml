@@ -2,5 +2,7 @@
 <resources>
 
     <dimen name="input_corner_radius">6dp</dimen>
+    <dimen name="grid_item_height">160dp</dimen>
+    <dimen name="grid_item_width">120dp</dimen>
 
 </resources>
